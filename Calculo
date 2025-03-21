@@ -1,0 +1,26 @@
+
+
+
+alunos_notas = {}
+soma_nota = 0
+
+for i in range(3):
+    nome = input("Digite os nomes:")
+    nota = float(input("Digite a nota:"))
+    alunos_notas[nome] = nota 
+    
+for nota in alunos_notas.values():
+    soma_nota = soma_nota + nota
+    
+media = soma_nota / 3
+
+print(media)
+
+    
+
+    
+    
+    
+    
+    
+    
