@@ -1,9 +1,76 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36" version="26.2.14">
   <diagram name="PÃ¡gina-1" id="ZffOthNAXcba0_ALX_hP">
-    <mxGraphModel>
+    <mxGraphModel dx="1665" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="10" value="í ½í¶¥ FRONTEND" style="swimlane;horizontal=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="220" height="600" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="â€¢ Chat com histÃ³rico&#xa;â€¢ Upload de arquivos&#xa;â€¢ Acionar plugins&#xa;â€¢ Dashboard de ferramentas&#xa;â€¢ Login/Conta" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="10">
+          <mxGeometry x="20" y="40" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value=" SUPABASE" style="swimlane;horizontal=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="120" width="240" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value=" Banco de Dados&#xa;- usuÃ¡rios&#xa;- conversas&#xa;- mensagens&#xa;- arquivos&#xa;- favoritos&#xa;- logs&#xa;- embeddings (RAG)" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="20">
+          <mxGeometry x="20" y="40" width="200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value=" AutenticaÃ§Ã£o&#xa;- Supabase Auth&#xa;- JWT Tokens" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="20">
+          <mxGeometry x="20" y="220" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value=" Armazenamento&#xa;- Supabase Storage" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="20">
+          <mxGeometry x="20" y="290" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value=" n8n BACKEND" style="swimlane;horizontal=0;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="640" height="860" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="[1] AutenticaÃ§Ã£o de UsuÃ¡rios&#xa;- Login/registro via Supabase Auth&#xa;- Admin / UsuÃ¡rio&#xa;- JWT para sessÃ£o" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="30">
+          <mxGeometry x="20" y="40" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="[2] Painel Admin&#xa;- Visualizar usuÃ¡rios&#xa;- HistÃ³rico de conversas&#xa;- PermissÃµes&#xa;- MÃ©tricas API/token" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="30">
+          <mxGeometry x="320" y="40" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="[3] Processamento de Mensagens&#xa;- Webhook do Frontend&#xa;- Recupera contexto no Supabase&#xa;- Envia prompt Ã  OpenAI&#xa;- TÃ©cnicas anti-alucinaÃ§Ã£o (RAG, APIs externas)&#xa;- Armazena e responde" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="30">
+          <mxGeometry x="20" y="160" width="580" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="[4] MemÃ³ria e HistÃ³rico&#xa;- Criar, continuar, apagar conversas&#xa;- Buscar histÃ³rico&#xa;- Favoritar conversas" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="30">
+          <mxGeometry x="20" y="320" width="580" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="[5] Upload e AnÃ¡lise de Arquivos&#xa;- Armazena no Supabase&#xa;- Extrai conteÃºdo (PDF, Excel, Imagem)&#xa;- InterpretaÃ§Ã£o com OpenAI&#xa;- Gera resumo / grÃ¡ficos / downloads" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="30">
+          <mxGeometry x="20" y="440" width="580" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="[6] Ferramentas Estilo ChatGPT Pro&#xa; Browser Mode (HTTP Request Node)&#xa;í ½í³Š Code Interpreter (dados, grÃ¡ficos)&#xa;í ½í³ž Function Calling (APIs externas)&#xa;í ½í¶¼ Image Analysis (Vision/OCR)&#xa;í ½í³„ File Summarizer&#xa;í ½í´§ Custom Tools (Notion, Slack, etc)" style="shape=rectangle;whiteSpace=wrap;rounded=1;" vertex="1" parent="30">
+          <mxGeometry x="20" y="580" width="580" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="100" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;" edge="1" parent="1" source="11" target="33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="101" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;" edge="1" parent="1" source="31" target="22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="102" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;" edge="1" parent="1" source="33" target="21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="103" value="Prompt â†” Resposta" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;dashed=1;" edge="1" parent="1" source="33">
+          <mxGeometry x="0.5" relative="1" as="geometry">
+            <mxPoint x="700" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="104" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;" edge="1" parent="1" source="35" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="105" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;" edge="1" parent="1" source="34" target="21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="106" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;" edge="1" parent="1" source="36" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="107" value="APIs externas (clima, navegador, etc)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;endArrow=block;dashed=1;" edge="1" parent="1" source="36">
+          <mxGeometry x="0.5" relative="1" as="geometry">
+            <mxPoint x="720" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
